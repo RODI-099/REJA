@@ -1,20 +1,24 @@
 console.log("Web Serverni boshlash");
+const {log} = require("console");
 const express = require("express");
 const app = express();
+const res = require("express/lib/response")
 const http = require("http");
 const fs = require("fs");
 
 let user;
 
 fs.readFile("database/user.json", "utf8", (err, data) => {
-    if(err) {
+    if (err) {
         console.log("ERROR:", err);
     } else {
         user = JSON.parse(data);
+
+        // Start the server only after user data is loaded
+    
     }
 });
-
-
+ 
 
 // 1 Kirish code
 app.use(express.static("public"));
@@ -54,3 +58,12 @@ server.listen(PORT, function () {
     console.log(`The server is running successfully on port: ${PORT}`);
 });
 
+// Yuqorida Express orqali web server qurib oldik!
+// EJS orqali backend ichida frontend ni qurib olamz!
+
+// Nodemon -- bu package kodda o'zgarish bo'lsa serverni qayta ishga tushiradi!
+// npm start => faqat start script bo'lsagina run beradi.
+// npm run start => start dan boshqa script lar bo'lsa masalan: dev, bu holatda npm run dev ishlatamz!
+
+//  GET - database dan ma'lumotni olish uchun GET ishlatiladi.
+// POST - ma'lumotni o'zi bilan olib keladi va database ga o'sha ma'lumotni yozadi.
