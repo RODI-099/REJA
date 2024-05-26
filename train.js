@@ -51,8 +51,8 @@ class Shop {
 const shop = new Shop(4, 5, 2);
 
 shop.qoldiq(); // Hozirgi inventarizatsiyani va vaqtni log qiladi
-shop.sotish('non', 3); // 3ta non sotadi, vaqtni log qiladi va inventarizatsiyani yangilaydi
-shop.qabul('cola', 4); // 4ta cola qabul qiladi, vaqtni log qiladi va inventarizatsiyani yangilaydi
+shop.sotish('sariyog', 3); // 3ta sariyog sotadi, vaqtni log qiladi va inventarizatsiyani yangilaydi
+shop.qabul('choy', 4); // 4ta choy qabul qiladi, vaqtni log qiladi va inventarizatsiyani yangilaydi
 shop.qoldiq(); // Qayta inventarizatsiyani va vaqtni log qiladi
 
 
