@@ -1,59 +1,77 @@
+// 
+
+function SameLetters(str1, str2) {
+    const sortedStr1 = str1.split('').sort().join('');
+    const sortedStr2 = str2.split('').sort().join('');
+
+    return sortedStr1 === sortedStr2;
+}
+
+
+console.log(SameLetters("listen", "silent")); 
+console.log(SameLetters("hello", "olleh")); 
+console.log(SameLetters("abc", "cba")); 
+console.log(SameLetters("abcd", "abcc")); 
+
+
+
+
 // MITASK-C 
 
 // Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
 // MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-class Shop {
-    constructor(sariyog, banan, choy) {
-        this.products = {
-            sariyog: sariyog,
-            banan: banan,
-            choy: choy
-        };
-    }
+// class Shop {
+//     constructor(sariyog, banan, choy) {
+//         this.products = {
+//             sariyog: sariyog,
+//             banan: banan,
+//             choy: choy
+//         };
+//     }
 
-    logTime() {
-        const now = new Date();
-        return `Hozirgi vaqt: ${now.toLocaleTimeString()}`;
-    }
+//     logTime() {
+//         const now = new Date();
+//         return `Hozirgi vaqt: ${now.toLocaleTimeString()}`;
+//     }
 
-    qoldiq() {
-        console.log(`${this.logTime()}da ${this.products.sariyog}ta sariyog, ${this.products.banan}ta banan va ${this.products.choy}ta choy mavjud!`);
-    }
+//     qoldiq() {
+//         console.log(`${this.logTime()}da ${this.products.sariyog}ta sariyog, ${this.products.banan}ta banan va ${this.products.choy}ta choy mavjud!`);
+//     }
 
-    sotish(product, quantity) {
-        console.log(this.logTime());
-        if (this.products[product] !== undefined) {
-            if (this.products[product] >= quantity) {
-                this.products[product] -= quantity;
-                console.log(`${quantity}ta ${product} sotildi.`);
-            } else {
-                console.log(`Yetarli ${product} yo'q, ${quantity}ta sotish mumkin emas.`);
-            }
-        } else {
-            console.log(`${product} mahsuloti mavjud emas.`);
-        }
-        this.qoldiq();
-    }
+//     sotish(product, quantity) {
+//         console.log(this.logTime());
+//         if (this.products[product] !== undefined) {
+//             if (this.products[product] >= quantity) {
+//                 this.products[product] -= quantity;
+//                 console.log(`${quantity}ta ${product} sotildi.`);
+//             } else {
+//                 console.log(`Yetarli ${product} yo'q, ${quantity}ta sotish mumkin emas.`);
+//             }
+//         } else {
+//             console.log(`${product} mahsuloti mavjud emas.`);
+//         }
+//         this.qoldiq();
+//     }
 
-    qabul(product, quantity) {
-        console.log(this.logTime());
-        if (this.products[product] !== undefined) {
-            this.products[product] += quantity;
-            console.log(`${quantity}ta ${product} qabul qilindi.`);
-        } else {
-            console.log(`${product} mahsuloti mavjud emas.`);
-        }
-        this.qoldiq();
-    }
-}
+//     qabul(product, quantity) {
+//         console.log(this.logTime());
+//         if (this.products[product] !== undefined) {
+//             this.products[product] += quantity;
+//             console.log(`${quantity}ta ${product} qabul qilindi.`);
+//         } else {
+//             console.log(`${product} mahsuloti mavjud emas.`);
+//         }
+//         this.qoldiq();
+//     }
+// }
 
-const shop = new Shop(4, 5, 2);
+// const shop = new Shop(4, 5, 2);
 
-shop.qoldiq(); // Hozirgi inventarizatsiyani va vaqtni log qiladi
-shop.sotish('sariyog', 3); // 3ta sariyog sotadi, vaqtni log qiladi va inventarizatsiyani yangilaydi
-shop.qabul('choy', 4); // 4ta choy qabul qiladi, vaqtni log qiladi va inventarizatsiyani yangilaydi
-shop.qoldiq(); // Qayta inventarizatsiyani va vaqtni log qiladi
+// shop.qoldiq(); // Hozirgi inventarizatsiyani va vaqtni log qiladi
+// shop.sotish('sariyog', 3); // 3ta sariyog sotadi, vaqtni log qiladi va inventarizatsiyani yangilaydi
+// shop.qabul('choy', 4); // 4ta choy qabul qiladi, vaqtni log qiladi va inventarizatsiyani yangilaydi
+// shop.qoldiq(); // Qayta inventarizatsiyani va vaqtni log qiladi
 
 
 
