@@ -1,21 +1,35 @@
+// E-TASK: 
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+
+function getReverse(str) {
+    return str.split('').reverse().join('');
+}
+
+// Misol uchun
+let result = getReverse("Rodi");
+console.log(result);  
+
 // D-TASK: 
 
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
 
-function SameLetters(str1, str2) {
-    const sortedStr1 = str1.split('').sort().join('');
-    const sortedStr2 = str2.split('').sort().join('');
+// function SameLetters(str1, str2) {
+//     const sortedStr1 = str1.split('').sort().join('');
+//     const sortedStr2 = str2.split('').sort().join('');
 
-    return sortedStr1 === sortedStr2;
-}
+//     return sortedStr1 === sortedStr2;
+// }
 
 
-console.log(SameLetters("listen", "silent")); 
-console.log(SameLetters("hello", "olleh")); 
-console.log(SameLetters("abc", "cba")); 
-console.log(SameLetters("abcd", "abcc")); 
+// console.log(SameLetters("listen", "silent")); 
+// console.log(SameLetters("hello", "olleh")); 
+// console.log(SameLetters("abc", "cba")); 
+// console.log(SameLetters("abcd", "abcc")); 
 
 
 
