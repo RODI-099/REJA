@@ -1,34 +1,51 @@
+// G-TASK: 
+
+// Shunday function tuzingki unga integerlardan iborat array pass bolsin va function bizga osha arrayning eng katta qiymatiga tegishli birinchi indexni qaytarsin.
+// MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
+
+function findIndexOfLargest(arr) {
+    if (arr.length === 0) {
+        return null;
+    }
+    
+    let maxVal = Math.max(...arr);
+    return arr.indexOf(maxVal);
+}
+
+const arr = [1, 141, 23, 10, 9, 92];
+console.log(findIndexOfLargest(arr));
+
 // F-TASK: 
 
 // Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
 // MASALAN: getReverse("hello") return true return qiladi
 
 
-function findDoublers(str) {
+// function findDoublers(str) {
     
-    let charCount = {};
+//     let charCount = {};
 
    
-    for (let char of str) {
+//     for (let char of str) {
         
-        if (charCount[char]) {
+//         if (charCount[char]) {
             
-            return true;
-        } else {
+//             return true;
+//         } else {
            
-            charCount[char] = 1;
-        }
-    }
+//             charCount[char] = 1;
+//         }
+//     }
 
     
-    return false;
-}
+//     return false;
+// }
 
 
-console.log(findDoublers("class"));  // true (l harfi ikki marta qatnashgan)
-console.log(findDoublers("world"));  // false (barcha harflar bir marta qatnashgan)
-console.log(findDoublers("kbs"));    // false (barcha harflar bir marta qatnashgan)
-console.log(findDoublers("bbc")); // true (hamma harflar ikki marta qatnashgan)
+// console.log(findDoublers("class"));  // true (l harfi ikki marta qatnashgan)
+// console.log(findDoublers("world"));  // false (barcha harflar bir marta qatnashgan)
+// console.log(findDoublers("kbs"));    // false (barcha harflar bir marta qatnashgan)
+// console.log(findDoublers("bbc")); // true (hamma harflar ikki marta qatnashgan)
 
 
 // E-TASK: 
